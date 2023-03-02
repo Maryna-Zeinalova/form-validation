@@ -3,7 +3,6 @@ const phoneInput = document.getElementById('phone');
 const emailInput = document.getElementById('email');
 const passwordInput = document.getElementById('password');
 const submitButton = document.getElementById('submit');
-const input = document.querySelectorAll('input');
 
 function validateStyle(condition, element){
     if (condition){
@@ -18,7 +17,6 @@ function validateStyle(condition, element){
 
 submitButton.addEventListener('click', function(event){
     event.preventDefault();
-    validateLength();
 })
 
 
