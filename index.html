@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <form>
+          <p>Welcome</p>
+          <input
+            type="text"
+            name="user-name"
+            id="user-name"
+            placeholder="Name and surname"
+            onchange="validateStyle(validateLetters(userNameInput.value) && validateLenght(userNameInput.value, 1, 25), userNameInput)"
+          />
+          <br />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            onchange="validateStyle(validateEmail(emailInput.value), emailInput)"
+          /><br />
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="Phone number"
+            onchange="validateStyle(validateNumbers(phoneInput.value) && validateLenght(phoneInput.value, 10, 12), phoneInput)"
+          />
+          <br />
+          <input type="password" placeholder="Password" id="password" onchange="validateStyle(validatePassword(passwordInput.value), passwordInput)" /><br />
+          <input type="submit" id="submit" value="Submit"/>
+        </form>
+      </div>
+      <div class="container">
+        <p>Form validation functions Library</p>
+        <div><a href="#">Here</a> you can find a full set of validation functions.</div>
+        <div>          
+        They check
+        <ul>
+          <li>if the field is empty</li>
+          <li>if it exceeds the limited number of symbols</li>
+          <li>if it contains numbers or letters</li>
+          <li>if there are special symbols</li>
+        </ul>
+        </div>
+    </div>
+    <script src="./script/validationLibrary.js"></script>
+    <script src="./script/script.js"></script>
+  </body>
+</html>
