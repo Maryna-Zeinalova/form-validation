@@ -18,6 +18,7 @@ function validateStyle(condition, element){
 
 submitButton.addEventListener('click', function(event){
     event.preventDefault();
+    validateLength();
 })
 
 
