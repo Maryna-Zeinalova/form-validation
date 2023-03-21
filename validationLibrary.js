@@ -1,35 +1,32 @@
 function validateLenght(element, minLength, maxLength) {
   if (element.length >= minLength && element.length <= maxLength) {
-     return true;
-    
-  } else {
-    console.log('false');
+     return true;    
   }
+    return false;
 }
 
 function validateLetters(element) {
   const regex = /^[A-Za-z\s]*$/i;
   if (regex.test(element)) {
     return true;
-  } else {
-    return false;
   }
+    return false;
 }
 
 function validateNumbers(phoneNumber) {
-  if (/^\d+$/.test(phoneNumber)) {
+  const regex = /^\d+$/;
+  if (regex.test(phoneNumber)) {
     return true;
-  } else {
-    return false;
   }
+    return false;
 }
 
 function validateEmail(emailAddress) {
-  if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailAddress.trim())) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (regex.test(emailAddress.trim())) {
     return true;
-  } else {
-    return false;
   }
+    return false;
 }
 
 //Password should contain at least one uppercase letter,one lowercase letter, one digit, one special symbol, more than 4 character
@@ -42,7 +39,6 @@ function validatePassword(password) {
     password.length >= 4
   ) {
     return true;
-  } else {
-    return false;
   }
+    return false;
 }
